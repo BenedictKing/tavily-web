@@ -36,7 +36,7 @@ Tavily Web Skill 是一个全面的 Claude Code 技能，通过 Tavily API 提�
 # 安装到 Claude Code
 npx add-skill BenedictKing/tavily-web
 
-# 或全局安装到所有检测到的代理
+# 或全局安装到所有检测到的 AI 编程助手（Claude Code、Cursor、Codex 等）
 npx add-skill BenedictKing/tavily-web -g
 ```
 

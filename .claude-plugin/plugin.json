@@ -2,9 +2,14 @@
   "name": "tavily-web",
   "description": "Web research skill for Codex/Claude - search/extract/crawl/map/research via Tavily API",
   "author": {
-    "name": "BenedictKing"
+    "name": "BenedictKing",
+    "url": "https://github.com/BenedictKing"
   },
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BenedictKing/tavily-web.git"
+  },
   "skills": [
     ".claude/skills/tavily-web"
   ],
