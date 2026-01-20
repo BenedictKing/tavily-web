@@ -27,7 +27,7 @@ function loadApiKey() {
   }
 
   const envContent = fs.readFileSync(envPath, 'utf8');
-  const match = envContent.match(/TAVILY_API_KEY\\s*=\\s*(.+)/);
+  const match = envContent.match(/TAVILY_API_KEY\s*=\s*(.+)/);
   if (!match) {
     return null;
   }
