@@ -1,8 +1,8 @@
 ---
 name: tavily-web
-version: 1.0.1
+version: 1.0.2
 author: BenedictKing
-description: Web research skill using Tavily API for search, extract, crawl, map, and structured research tasks. Use when you need latest information, extract content from URLs, or discover site structure. Triggers: tavily, web search, search web, latest info, extract, crawl, map, research, 搜索网页, 查资料, 最新
+description: "Web research skill using Tavily API for search, extract, crawl, map, and structured research tasks. Use when you need latest information, extract content from URLs, or discover site structure. Triggers: tavily, web search, search web, latest info, extract, crawl, map, research, 搜索网页, 查资料, 最新"
 allowed-tools:
   - Task
   - Bash
