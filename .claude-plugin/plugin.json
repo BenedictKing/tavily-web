@@ -1,0 +1,22 @@
+{
+  "name": "tavily-web",
+  "description": "Web research skill for Codex/Claude - search/extract/crawl/map/research via Tavily API",
+  "author": {
+    "name": "petaflops"
+  },
+  "version": "1.0.0",
+  "skills": [
+    ".claude/skills/tavily-web"
+  ],
+  "keywords": [
+    "tavily",
+    "web",
+    "research",
+    "search",
+    "extract",
+    "crawl",
+    "map"
+  ],
+  "license": "MIT"
+}
+
