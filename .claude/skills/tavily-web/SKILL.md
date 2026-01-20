@@ -1,7 +1,7 @@
 ---
 name: tavily-web
 version: 1.0.0
-author: petaflops
+author: BenedictKing
 description: 使用 Tavily API 进行网页搜索（search）、页面抽取（extract）、站点遍历（crawl）、站点 URL 发现（map）与结构化研究任务（research）。适用于需要最新信息、需要从指定 URL 提取内容、或需要对站点做自动遍历/页面发现的场景。触发词：tavily、搜索网页、查资料、最新、web search、extract、crawl、map、research
 allowed-tools:
   - Task

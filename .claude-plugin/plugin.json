@@ -2,7 +2,7 @@
   "name": "tavily-web",
   "description": "Web research skill for Codex/Claude - search/extract/crawl/map/research via Tavily API",
   "author": {
-    "name": "petaflops"
+    "name": "BenedictKing"
   },
   "version": "1.0.0",
   "skills": [

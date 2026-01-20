@@ -18,7 +18,7 @@
     "ai",
     "llm"
   ],
-  "author": "petaflops",
+  "author": "BenedictKing",
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"

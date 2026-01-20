@@ -1,7 +1,7 @@
 ---
 name: tavily-fetcher
 version: 1.0.0
-author: petaflops
+author: BenedictKing
 description: 执行 Tavily API 调用的独立子任务（内部使用）
 allowed-tools:
   - Bash
