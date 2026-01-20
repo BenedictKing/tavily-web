@@ -1,24 +1,24 @@
 ---
 name: tavily-fetcher
-version: 1.0.0
+version: 1.0.1
 author: BenedictKing
-description: 执行 Tavily API 调用的独立子任务（内部使用）
+description: Independent subtask for executing Tavily API calls (internal use)
 allowed-tools:
   - Bash
 context: fork
 ---
 
-# Tavily Fetcher 子技能
+# Tavily Fetcher Sub-skill
 
-> 注意：这是一个内部子技能，由 `tavily-web` 主技能通过 Task 工具调用。
+> Note: This is an internal sub-skill, invoked by the `tavily-web` main skill through the Task tool.
 
-## 用途
+## Purpose
 
-在 `context: fork` 的独立上下文中执行 Tavily API 调用，避免携带主对话上下文，降低 token 消耗。
+Execute Tavily API calls in an independent context with `context: fork`, avoiding carrying main conversation context, reducing token consumption.
 
-## 接收参数
+## Received Parameters
 
-通过 Task 的 `prompt` 传入完整命令，约定使用 stdin 传 JSON：
+Receives complete command through Task's `prompt`, using stdin for JSON:
 
 ```bash
 cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js <search|extract|crawl|map|research>
@@ -26,7 +26,6 @@ cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js <search|extract|craw
 JSON
 ```
 
-## 输出
+## Output
 
-原样返回 Tavily API 的 JSON 响应（pretty print）。
-
+Returns Tavily API's JSON response as-is (pretty printed).

@@ -1,8 +1,8 @@
 ---
 name: tavily-web
-version: 1.0.0
+version: 1.0.1
 author: BenedictKing
-description: 使用 Tavily API 进行网页搜索（search）、页面抽取（extract）、站点遍历（crawl）、站点 URL 发现（map）与结构化研究任务（research）。适用于需要最新信息、需要从指定 URL 提取内容、或需要对站点做自动遍历/页面发现的场景。触发词：tavily、搜索网页、查资料、最新、web search、extract、crawl、map、research
+description: Web research skill using Tavily API for search, extract, crawl, map, and structured research tasks. Use when you need latest information, extract content from URLs, or discover site structure. Triggers: tavily, web search, search web, latest info, extract, crawl, map, research, 搜索网页, 查资料, 最新
 allowed-tools:
   - Task
   - Bash
@@ -13,29 +13,29 @@ user-invocable: true
 
 # Tavily Web Skill
 
-## 触发与选型
+## Trigger Conditions & Endpoint Selection
 
-根据用户意图选择 Tavily 端点：
+Choose Tavily endpoint based on user intent:
 
-- **search**：需要“搜索网页/最新信息/找来源/找链接”
-- **extract**：已给出 URL，需要抽取/总结正文
-- **crawl**：需要按指令遍历站点并抓取页面内容
-- **map**：需要发现站点页面列表/站点结构（不抓全文或只抓元信息）
-- **research**：需要按给定 `output_schema` 产出结构化研究结果
+- **search**: Need to "search web / latest info / find sources / find links"
+- **extract**: Given URL(s), need to extract/summarize content
+- **crawl**: Need to traverse site following instructions and scrape page content
+- **map**: Need to discover site page list/structure (without full content or metadata only)
+- **research**: Need structured research output following given `output_schema`
 
-## 推荐架构（主技能 + 子技能）
+## Recommended Architecture (Main Skill + Sub-skill)
 
-遵循 `context7-auto-research` 的成熟模式：
+This skill uses a two-phase architecture:
 
-1. **主技能（当前上下文）**：理解用户问题 → 选择端点 → 组装 JSON payload
-2. **子技能（fork 上下文）**：只负责执行 HTTP 调用，避免携带对话历史浪费 token
+1. **Main skill (current context)**: Understand user question → Choose endpoint → Assemble JSON payload
+2. **Sub-skill (fork context)**: Only responsible for HTTP call execution, avoiding conversation history token waste
 
-## 执行方式
+## Execution Method
 
-使用 Task 工具调用 `tavily-fetcher` 子技能，传入命令与 JSON（stdin）：
+Use Task tool to invoke `tavily-fetcher` sub-skill, passing command and JSON (stdin):
 
 ```
-Task 参数：
+Task parameters:
 - subagent_type: Bash
 - description: "Call Tavily API"
 - prompt: cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js <search|extract|crawl|map|research>
@@ -43,7 +43,7 @@ Task 参数：
   JSON
 ```
 
-## Payload 示例（对应你提供的 curl）
+## Payload Examples (Based on Provided curl)
 
 ### 1) Search the web
 
@@ -178,10 +178,9 @@ cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js research
 JSON
 ```
 
-## 环境变量与密钥
+## Environment Variables & API Key
 
-支持两种方式配置 API Key（优先级：环境变量 > `.env`）：
+Two ways to configure API Key (priority: environment variable > `.env`):
 
-1. 环境变量：`TAVILY_API_KEY`
-2. `.env` 文件：放在 `.claude/skills/tavily-web/.env`，可从 `.env.example` 复制
-
+1. Environment variable: `TAVILY_API_KEY`
+2. `.env` file: Place in `.claude/skills/tavily-web/.env`, can copy from `.env.example`
