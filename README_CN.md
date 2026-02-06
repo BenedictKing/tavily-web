@@ -277,6 +277,33 @@ Claude：[自动调用 Tavily 研究 API]
 [提供包含多个来源的结构化报告]
 ```
 
+## 与 Exa 的比较
+
+| 功能 | [Tavily](https://tavily.com) | [Exa](https://exa.ai) |
+|------|--------|-----|
+| 搜索类型 | 关键词 + AI 增强 | 基于嵌入的语义搜索 |
+| 爬取/映射 | ✅ | ❌ |
+| 研究报告 | ✅ 带引用的结构化报告 | ✅ 自定义输出模式 |
+| 搜索模式 | basic/advanced | neural/fast/deep/auto |
+| 相似查找 | ❌ | ✅ |
+| 类别搜索 | ❌ | ✅（公司、人物、论文等） |
+| 成本追踪 | ❌ | ✅ 每次请求详细 |
+
+**Claude Code Skills：**
+- Tavily：[BenedictKing/tavily-web](https://github.com/BenedictKing/tavily-web)
+- Exa：[BenedictKing/exa-search](https://github.com/BenedictKing/exa-search)
+
+**使用 Tavily 当：**
+- 需要网站爬取/映射
+- 需要带引用的结构化研究
+- 偏好关键词搜索
+
+**使用 Exa 当：**
+- 需要语义/基于嵌入的搜索
+- 查找相似内容很重要
+- 需要特定类别搜索
+- 需要成本追踪
+
 ## 下一步
 
 - 查看 [.claude/skills/tavily-web/SKILL.md](./.claude/skills/tavily-web/SKILL.md) 了解技术细节

@@ -277,6 +277,33 @@ Here's a comprehensive research report...
 [Provides structured report with multiple sources]
 ```
 
+## Comparison with Exa
+
+| Feature | [Tavily](https://tavily.com) | [Exa](https://exa.ai) |
+|---------|--------|-----|
+| Search Type | Keyword + AI-enhanced | Embeddings-based semantic |
+| Crawl/Map | ✅ | ❌ |
+| Research Reports | ✅ Structured with citations | ✅ Custom output schemas |
+| Search Modes | basic/advanced | neural/fast/deep/auto |
+| Find Similar | ❌ | ✅ |
+| Category Search | ❌ | ✅ (company, people, papers, etc.) |
+| Cost Tracking | ❌ | ✅ Detailed per request |
+
+**Claude Code Skills:**
+- Tavily: [BenedictKing/tavily-web](https://github.com/BenedictKing/tavily-web)
+- Exa: [BenedictKing/exa-search](https://github.com/BenedictKing/exa-search)
+
+**Use Tavily when:**
+- You need site crawling/mapping
+- You want structured research with citations
+- You prefer keyword-based search
+
+**Use Exa when:**
+- You need semantic/embeddings-based search
+- Finding similar content is important
+- You want category-specific searches
+- Cost tracking is required
+
 ## Next Steps
 
 - Check [.claude/skills/tavily-web/SKILL.md](./.claude/skills/tavily-web/SKILL.md) for technical details
