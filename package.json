@@ -2,9 +2,9 @@
   "name": "tavily-web",
   "version": "1.0.0",
   "description": "Web research skill for Tavily - search/extract/crawl/map/research",
-  "main": ".claude/skills/tavily-web/tavily-api.js",
+  "main": ".claude/skills/tavily-web/tavily-api.cjs",
   "scripts": {
-    "test": "node .claude/skills/tavily-web/tavily-api.js --help"
+    "test": "node .claude/skills/tavily-web/tavily-api.cjs --help"
   },
   "keywords": [
     "tavily",

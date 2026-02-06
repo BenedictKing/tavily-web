@@ -82,10 +82,10 @@ TAVILY_API_KEY=your_actual_api_key_here
 
 ```bash
 # 搜索网页
-node .claude/skills/tavily-web/tavily-api.js search "最新 AI 发展"
+node .claude/skills/tavily-web/tavily-api.cjs search "最新 AI 发展"
 
 # 从 URL 提取内容
-node .claude/skills/tavily-web/tavily-api.js extract "https://example.com"
+node .claude/skills/tavily-web/tavily-api.cjs extract "https://example.com"
 ```
 
 如果看到 JSON 响应，说明配置成功！
@@ -129,7 +129,7 @@ node .claude/skills/tavily-web/tavily-api.js extract "https://example.com"
 执行智能网页搜索：
 
 ```bash
-node tavily-api.js search "查询内容" [选项]
+node tavily-api.cjs search "查询内容" [选项]
 
 选项：
   --max-results <n>     最大结果数量（默认：5）
@@ -149,7 +149,7 @@ Claude：[自动调用 Tavily 搜索 API]
 从 URL 提取干净的内容：
 
 ```bash
-node tavily-api.js extract "url1,url2,url3"
+node tavily-api.cjs extract "url1,url2,url3"
 ```
 
 **示例：**
@@ -163,7 +163,7 @@ Claude：[自动调用 Tavily 提取 API]
 爬取网站以发现和提取内容：
 
 ```bash
-node tavily-api.js crawl "url" [选项]
+node tavily-api.cjs crawl "url" [选项]
 
 选项：
   --max-pages <n>       最大爬取页面数（默认：10）
@@ -182,7 +182,7 @@ Claude：[自动调用 Tavily 爬取 API]
 发现网站内的所有 URL：
 
 ```bash
-node tavily-api.js map "url" [选项]
+node tavily-api.cjs map "url" [选项]
 
 选项：
   --max-urls <n>        最大发现 URL 数（默认：100）
@@ -200,7 +200,7 @@ Claude：[自动调用 Tavily 地图 API]
 创建结构化研究报告：
 
 ```bash
-node tavily-api.js research "主题" [选项]
+node tavily-api.cjs research "主题" [选项]
 
 选项：
   --max-sources <n>     最大使用来源数（默认：10）
@@ -287,7 +287,7 @@ Claude：[自动调用 Tavily 研究 API]
 ### 脚本执行失败
 ```bash
 # 确保脚本有执行权限
-chmod +x .claude/skills/tavily-web/tavily-api.js
+chmod +x .claude/skills/tavily-web/tavily-api.cjs
 
 # 确保 Node.js 已安装
 node --version  # 应该显示版本号

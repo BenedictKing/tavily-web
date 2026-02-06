@@ -21,7 +21,7 @@ Execute Tavily API calls in an independent context with `context: fork`, avoidin
 Receives complete command through Task's `prompt`, using stdin for JSON:
 
 ```bash
-cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js <search|extract|crawl|map|research>
+cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.cjs <search|extract|crawl|map|research>
 { ...payload... }
 JSON
 ```

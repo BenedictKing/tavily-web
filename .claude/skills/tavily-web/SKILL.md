@@ -38,7 +38,7 @@ Use Task tool to invoke `tavily-fetcher` sub-skill, passing command and JSON (st
 Task parameters:
 - subagent_type: Bash
 - description: "Call Tavily API"
-- prompt: cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js <search|extract|crawl|map|research>
+- prompt: cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.cjs <search|extract|crawl|map|research>
   { ...payload... }
   JSON
 ```
@@ -48,7 +48,7 @@ Task parameters:
 ### 1) Search the web
 
 ```bash
-cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js search
+cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.cjs search
 {
   "query": "who is Leo Messi?",
   "auto_parameters": false,
@@ -75,7 +75,7 @@ JSON
 ### 2) Extract webpages
 
 ```bash
-cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js extract
+cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.cjs extract
 {
   "urls": "https://en.wikipedia.org/wiki/Artificial_intelligence",
   "query": "<string>",
@@ -93,7 +93,7 @@ JSON
 ### 3) Crawl webpages
 
 ```bash
-cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js crawl
+cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.cjs crawl
 {
   "url": "docs.tavily.com",
   "instructions": "Find all pages about the Python SDK",
@@ -119,7 +119,7 @@ JSON
 ### 4) Map webpages
 
 ```bash
-cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js map
+cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.cjs map
 {
   "url": "docs.tavily.com",
   "instructions": "Find all pages about the Python SDK",
@@ -140,7 +140,7 @@ JSON
 ### 5) Create Research Task
 
 ```bash
-cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.js research
+cat <<'JSON' | node .claude/skills/tavily-web/tavily-api.cjs research
 {
   "input": "What are the latest developments in AI?",
   "model": "auto",

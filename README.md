@@ -82,10 +82,10 @@ Verify your configuration:
 
 ```bash
 # Search the web
-node .claude/skills/tavily-web/tavily-api.js search "latest AI developments"
+node .claude/skills/tavily-web/tavily-api.cjs search "latest AI developments"
 
 # Extract content from a URL
-node .claude/skills/tavily-web/tavily-api.js extract "https://example.com"
+node .claude/skills/tavily-web/tavily-api.cjs extract "https://example.com"
 ```
 
 If you see JSON responses, your setup is successful!
@@ -129,7 +129,7 @@ The skill automatically activates when detecting these keywords:
 Perform intelligent web searches:
 
 ```bash
-node tavily-api.js search "query" [options]
+node tavily-api.cjs search "query" [options]
 
 Options:
   --max-results <n>     Maximum number of results (default: 5)
@@ -149,7 +149,7 @@ Claude: [Automatically calls Tavily search API]
 Extract clean content from URLs:
 
 ```bash
-node tavily-api.js extract "url1,url2,url3"
+node tavily-api.cjs extract "url1,url2,url3"
 ```
 
 **Example:**
@@ -163,7 +163,7 @@ Claude: [Automatically calls Tavily extract API]
 Crawl websites to discover and extract content:
 
 ```bash
-node tavily-api.js crawl "url" [options]
+node tavily-api.cjs crawl "url" [options]
 
 Options:
   --max-pages <n>       Maximum pages to crawl (default: 10)
@@ -182,7 +182,7 @@ Claude: [Automatically calls Tavily crawl API]
 Discover all URLs within a website:
 
 ```bash
-node tavily-api.js map "url" [options]
+node tavily-api.cjs map "url" [options]
 
 Options:
   --max-urls <n>        Maximum URLs to discover (default: 100)
@@ -200,7 +200,7 @@ Claude: [Automatically calls Tavily map API]
 Create structured research reports:
 
 ```bash
-node tavily-api.js research "topic" [options]
+node tavily-api.cjs research "topic" [options]
 
 Options:
   --max-sources <n>     Maximum sources to use (default: 10)
@@ -287,7 +287,7 @@ Here's a comprehensive research report...
 ### Script Execution Fails
 ```bash
 # Ensure script has execute permissions
-chmod +x .claude/skills/tavily-web/tavily-api.js
+chmod +x .claude/skills/tavily-web/tavily-api.cjs
 
 # Ensure Node.js is installed
 node --version  # Should display version number
