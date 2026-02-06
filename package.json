@@ -1,6 +1,6 @@
 {
   "name": "tavily-web",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Web research skill for Tavily - search/extract/crawl/map/research",
   "main": ".claude/skills/tavily-web/tavily-api.cjs",
   "scripts": {
