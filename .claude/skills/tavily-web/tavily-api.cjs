@@ -97,6 +97,21 @@ async function readPayload(args) {
   return JSON.parse(stdin);
 }
 
+function validatePayload(command, payload) {
+  const required = {
+    search: 'query',
+    extract: 'urls',
+    crawl: 'url',
+    map: 'url',
+    research: 'input'
+  };
+
+  const field = required[command];
+  if (field && !payload[field]) {
+    throw new Error(`Missing required field: '${field}'`);
+  }
+}
+
 function postJson(endpointPath, apiKey, payload) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify(payload);
@@ -174,9 +189,23 @@ const ENDPOINT_BY_COMMAND = {
   }
 
   try {
-    const payload = await readPayload(process.argv.slice(3));
+    const args = process.argv.slice(3);
+    const outputIndex = args.findIndex(arg => arg === '--output');
+    const outputFile = outputIndex !== -1 ? args[outputIndex + 1] : null;
+    const payloadArgs = outputFile ? args.filter((_, i) => i !== outputIndex && i !== outputIndex + 1) : args;
+
+    const payload = await readPayload(payloadArgs);
+    validatePayload(command, payload);
+
     const result = await postJson(endpoint, apiKey, payload);
-    console.log(JSON.stringify(result, null, 2));
+    const output = JSON.stringify(result, null, 2);
+
+    if (outputFile) {
+      fs.writeFileSync(outputFile, output, 'utf8');
+      console.error(`Results saved to: ${outputFile}`);
+    } else {
+      console.log(output);
+    }
   } catch (error) {
     console.error(`Error: ${error.message}`);
     process.exit(1);

@@ -304,9 +304,24 @@ Here's a comprehensive research report...
 - You want category-specific searches
 - Cost tracking is required
 
+## 📚 Documentation
+
+### Quick Start
+- [SKILL.md](./.claude/skills/tavily-web/SKILL.md) - Skill definition and usage
+- [API Reference](https://docs.tavily.com/api-reference) - Official Tavily API docs
+
+### Detailed Guides
+- [Search Guide](./docs/search-guide.md) - Query optimization, depth selection, use cases
+- [Extract Guide](./docs/extract-guide.md) - URL extraction, query reranking, batch processing
+- [Crawl Guide](./docs/crawl-guide.md) - 7 scenarios, path filtering, Map-then-Extract pattern
+- [Research Guide](./docs/research-guide.md) - Model selection, structured output, citations
+- [Best Practices](./docs/best-practices.md) - Performance optimization, RAG integration, error handling
+
+### Comparison
+- [vs Official Tavily Skills](./COMPARISON.md) - Architecture comparison and feature analysis
+
 ## Next Steps
 
-- Check [.claude/skills/tavily-web/SKILL.md](./.claude/skills/tavily-web/SKILL.md) for technical details
 - Start asking questions and let Claude automatically fetch the latest web information!
 
 ## Troubleshooting

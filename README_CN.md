@@ -304,9 +304,24 @@ Claude：[自动调用 Tavily 研究 API]
 - 需要特定类别搜索
 - 需要成本追踪
 
+## 📚 文档
+
+### 快速开始
+- [SKILL.md](./.claude/skills/tavily-web/SKILL.md) - 技能定义和使用说明
+- [API 参考](https://docs.tavily.com/api-reference) - Tavily 官方 API 文档
+
+### 详细指南
+- [搜索指南](./docs/search-guide.md) - 查询优化、深度选择、使用场景
+- [提取指南](./docs/extract-guide.md) - URL 提取、查询重排、批量处理
+- [爬取指南](./docs/crawl-guide.md) - 7 个场景、路径过滤、Map-then-Extract 模式
+- [研究指南](./docs/research-guide.md) - 模型选择、结构化输出、引用格式
+- [最佳实践](./docs/best-practices.md) - 性能优化、RAG 集成、错误处理
+
+### 对比分析
+- [vs 官方 Tavily Skills](./COMPARISON.md) - 架构对比和功能分析
+
 ## 下一步
 
-- 查看 [.claude/skills/tavily-web/SKILL.md](./.claude/skills/tavily-web/SKILL.md) 了解技术细节
 - 开始提问，让 Claude 自动获取最新的网页信息！
 
 ## 故障排除
