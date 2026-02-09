@@ -28,21 +28,27 @@ Tavily Web Skill 是一个全面的 Claude Code 技能，通过 Tavily API 提�
 
 ## 安装方式
 
-### 方式一：使用 add-skill 安装（推荐）
+### 方式一：使用 skill-master 安装（推荐）
 
-最简单的安装方式是使用 `add-skill` 工具：
+最简单的安装方式是使用 `skill-master` 工具：
 
 ```bash
-# 安装到 Claude Code
-npx add-skill BenedictKing/tavily-web
+# 全局安装到所有检测到的 AI 编程助手（Claude Code、Cursor、Codex 等）
+npx skill-master add -g BenedictKing/tavily-web
 
-# 或全局安装到所有检测到的 AI 编程助手（Claude Code、Cursor、Codex 等）
-npx add-skill BenedictKing/tavily-web -g
+# 或仅安装到当前项目
+npx skill-master add BenedictKing/tavily-web
 ```
 
 Skill 会自动安装到 `~/.claude/skills/tavily-web` 并被 Claude Code 加载。
 
-### 方式二：通过 Git Clone 手动安装
+### 方式二：使用 skills CLI 安装
+
+```bash
+npx skills add -g BenedictKing/tavily-web
+```
+
+### 方式三：通过 Git Clone 手动安装
 
 如果你偏好手动安装或想自定义设置：
 

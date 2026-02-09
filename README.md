@@ -28,21 +28,27 @@ Set up in 5 minutes
 
 ## Installation
 
-### Option 1: Install via skills CLI (Recommended)
+### Option 1: Install via skill-master (Recommended)
 
-The easiest way to install this skill is using the `skills` CLI tool:
+The easiest way to install this skill is using the `skill-master` CLI tool:
 
 ```bash
 # Install globally to all detected agents (Claude Code, Cursor, Codex, etc.)
-npx skills add -g BenedictKing/tavily-web
+npx skill-master add -g BenedictKing/tavily-web
 
 # Or install to current project only
-npx skills add BenedictKing/tavily-web
+npx skill-master add BenedictKing/tavily-web
 ```
 
 The skill will be automatically installed to `~/.claude/skills/tavily-web` and loaded by Claude Code.
 
-### Option 2: Manual Installation via Git Clone
+### Option 2: Install via skills CLI
+
+```bash
+npx skills add -g BenedictKing/tavily-web
+```
+
+### Option 3: Manual Installation via Git Clone
 
 If you prefer manual installation or want to customize the setup:
 
